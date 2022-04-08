@@ -13,6 +13,7 @@
         android:orientation="horizontal">
 
     </androidx.recyclerview.widget.RecyclerView>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,4 +22,15 @@
         android:fontFamily="@font/kanit"
         style="@style/SubtitleTextStyle"
         android:layout_marginLeft="@dimen/default_margin"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vertical_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

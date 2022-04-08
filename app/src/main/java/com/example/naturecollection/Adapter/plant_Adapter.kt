@@ -7,7 +7,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.naturecollection.R
 
-class plant_Adapter:RecyclerView.Adapter<plant_Adapter.ViewHolder>() {
+class plant_Adapter(private val layout_id:Int):RecyclerView.Adapter<plant_Adapter.ViewHolder>() {
 
     //Pour porter la vue (boite pour ranger tout les composant a controller)
 
@@ -20,7 +20,7 @@ class plant_Adapter:RecyclerView.Adapter<plant_Adapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view= LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.item_horizontal_plant,parent,false)
+            .inflate(layout_id,parent,false)
 
         return ViewHolder(view)
     }
