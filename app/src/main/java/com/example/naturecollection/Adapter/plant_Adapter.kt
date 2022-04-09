@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextClock
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -23,8 +24,8 @@ class plant_Adapter(
     class ViewHolder(view:View):RecyclerView.ViewHolder(view){
         //importer l'image de la plante
         val plantImage=view.findViewById<ImageView>(R.id.image_item)
-        val plantName=view.findViewById<TextView>(R.id.name_item)
-        val plantDescription=view.findViewById<TextView>(R.id.description_item)
+        val plantName:TextView?=view.findViewById(R.id.name_item)
+        val plantDescription:TextView?=view.findViewById(R.id.description_item)
 
     }
 
@@ -43,10 +44,15 @@ class plant_Adapter(
         //recuperer les information de la plante
         val currentPlant=plantlist[position]
 
+        //Mise a jour de l'image
         //Utilisation de glide pour recuperer l'image a partir de son lien et l'ajouter a notre composant
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)//chargement d'une image depuis un lien, convertion de l'url de l'image en uri et inclusion dans le composant existant
 
+        //Mise a jour du nom sur la plante
+        holder.plantName?.text=currentPlant.name
 
+        //Mise a jour de la description de la plante
+        holder.plantDescription?.text=currentPlant.description
 
     }
 
