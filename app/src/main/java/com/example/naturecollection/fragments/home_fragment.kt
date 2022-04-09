@@ -21,7 +21,23 @@ class home_fragment(private val context:MainActivity): Fragment(){
         //creer une liste  qui va stocker ces plantes
         val plantlist= arrayListOf<PlantModel>()
 
-        //Enregistrer une premiere plante dans notre liste
+        //recuperation du premier recycle view
+
+        val horizontalRecycleView=view.findViewById<RecyclerView>(R.id.horizontal_recylcleView)
+        horizontalRecycleView.adapter= plant_Adapter(context,plantlist,R.layout.item_horizontal_plant)
+
+
+        //recuperation du second recycle view
+
+        val verticalRecyclerView=view.findViewById<RecyclerView>(R.id.vertical_recycleView)
+        verticalRecyclerView.adapter= plant_Adapter(context,plantlist,R.layout.item_vertical_plant)
+        verticalRecyclerView.addItemDecoration(PlantItemDecoration())
+
+        return view
+    }
+}
+/*
+* //Enregistrer une premiere plante dans notre liste
         plantlist.add(
             PlantModel(
                 "Pissenlit",
@@ -57,18 +73,4 @@ class home_fragment(private val context:MainActivity): Fragment(){
                 false
             )
         )
-        //recuperation du premier recycle view
-
-        val horizontalRecycleView=view.findViewById<RecyclerView>(R.id.horizontal_recylcleView)
-        horizontalRecycleView.adapter= plant_Adapter(context,plantlist,R.layout.item_horizontal_plant)
-
-
-        //recuperation du second recycle view
-
-        val verticalRecyclerView=view.findViewById<RecyclerView>(R.id.vertical_recycleView)
-        verticalRecyclerView.adapter= plant_Adapter(context,plantlist,R.layout.item_vertical_plant)
-        verticalRecyclerView.addItemDecoration(PlantItemDecoration())
-
-        return view
-    }
-}
+* */
