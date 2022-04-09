@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
         //injection du fragment dans notre boite(fragment_container)
         val transaction=supportFragmentManager.beginTransaction()//manipulation de la dynamique des fragment
-        transaction.replace(R.id.fragment_container,home_fragment())//remplacement du contenu du fragment
+        transaction.replace(R.id.fragment_container,home_fragment(this))//remplacement du contenu du fragment
         transaction.addToBackStack(null)//pas avoir de retour sur ce composant
         transaction.commit()//Envoyer l'echangement
     }
