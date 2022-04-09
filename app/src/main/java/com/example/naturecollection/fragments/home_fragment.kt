@@ -17,6 +17,7 @@ class home_fragment(private val context:MainActivity): Fragment(){
     override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?): View? {
         val view= inflater?.inflate(R.layout.fragment_home,container,false)//Injecter le home fragment associer
 
+
         //creer une liste  qui va stocker ces plantes
         val plantlist= arrayListOf<PlantModel>()
 
@@ -24,7 +25,7 @@ class home_fragment(private val context:MainActivity): Fragment(){
         plantlist.add(
             PlantModel(
                 "Pissenlit",
-                "Jaune soleit",
+                "Jaune soleil",
                 "https://cdn.pixabay.com/photo/2014/05/01/17/51/dandelion-335662_960_720.jpg",
                 false
             )
@@ -52,7 +53,7 @@ class home_fragment(private val context:MainActivity): Fragment(){
             PlantModel(
                 "Tulipe",
                 "c'est beau",
-                "https://cdn.pixabay.com/photo/2018/05/16/22/27/rose-3407234_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2017/03/13/21/19/tulip-2141216_960_720.jpg",
                 false
             )
         )
