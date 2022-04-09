@@ -26,6 +26,7 @@ class plant_Adapter(
         val plantImage=view.findViewById<ImageView>(R.id.image_item)
         val plantName:TextView?=view.findViewById(R.id.name_item)
         val plantDescription:TextView?=view.findViewById(R.id.description_item)
+        val starIcon=view.findViewById<ImageView>(R.id.start_icon)
 
     }
 
@@ -53,6 +54,14 @@ class plant_Adapter(
 
         //Mise a jour de la description de la plante
         holder.plantDescription?.text=currentPlant.description
+
+        //Verifier si la plante a été liker ou non
+        if(currentPlant.liked){
+            holder.starIcon.setImageResource(R.drawable.ic_start)
+        }
+        else{
+            holder.starIcon.setImageResource(R.drawable.ic_unstart)
+        }
 
     }
 

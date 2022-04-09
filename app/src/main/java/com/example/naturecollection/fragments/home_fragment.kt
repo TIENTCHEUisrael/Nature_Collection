@@ -36,7 +36,7 @@ class home_fragment(private val context:MainActivity): Fragment(){
                 "Rose",
                 "ca pique un peu",
                 "https://cdn.pixabay.com/photo/2018/05/16/22/27/rose-3407234_960_720.jpg",
-                false
+                true
             )
         )
         //Enregistrer une troisieme plante dans notre liste

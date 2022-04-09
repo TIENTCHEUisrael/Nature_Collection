@@ -13,6 +13,13 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/trending1"/>
+    <ImageView
+        android:id="@+id/start_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_unstart"
+        app:tint="@color/green"
+        android:layout_margin="@dimen/item_margin"/>
 
 
 </androidx.cardview.widget.CardView>
