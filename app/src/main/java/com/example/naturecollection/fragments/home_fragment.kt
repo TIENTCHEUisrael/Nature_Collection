@@ -10,6 +10,7 @@ import com.example.naturecollection.Adapter.PlantItemDecoration
 import com.example.naturecollection.Adapter.plant_Adapter
 import com.example.naturecollection.MainActivity
 import com.example.naturecollection.PlantModel
+import com.example.naturecollection.PlantRepository.Singleton.plantlist
 import com.example.naturecollection.R
 
 class home_fragment(private val context:MainActivity): Fragment(){
@@ -17,9 +18,6 @@ class home_fragment(private val context:MainActivity): Fragment(){
     override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?): View? {
         val view= inflater?.inflate(R.layout.fragment_home,container,false)//Injecter le home fragment associer
 
-
-        //creer une liste  qui va stocker ces plantes
-        val plantlist= arrayListOf<PlantModel>()
 
         //recuperation du premier recycle view
 

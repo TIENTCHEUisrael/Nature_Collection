@@ -7,6 +7,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
+import javax.security.auth.callback.Callback
 
 class PlantRepository {
 
@@ -18,7 +19,7 @@ class PlantRepository {
         val plantlist= arrayListOf<PlantModel>()
     }
 
-    fun updateData(){
+    fun updateData(callback: ()-> Unit){
         //Prendre les donnée recuperer dans la database reference et les affecter a notre liste de plante qu'on a plus haut
         databaseref.addValueEventListener(object : ValueEventListener {
 
@@ -36,6 +37,8 @@ class PlantRepository {
                         plantlist.add(plant)
                     }
                 }
+                //Actionner le callback
+                callback()
             }
 
             override fun onCancelled(error: DatabaseError) {
