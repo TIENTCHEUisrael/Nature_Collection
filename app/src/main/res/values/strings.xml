@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Nature Collection</string>
 
+    <string name="bottom_home_item">Accueil</string>
+    <string name="bottmon_collection_item">Collection</string>
+    <string name="bottmon_add_plant">Ajouter</string>
 
     <!--Page d'accueil-->
     <string name="home_page_title">A Découvrir</string>
