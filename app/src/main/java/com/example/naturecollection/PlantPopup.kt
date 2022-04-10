@@ -4,8 +4,10 @@ import android.app.Dialog
 import android.net.Uri
 import android.os.Bundle
 import android.view.Window
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.naturecollection.Adapter.plant_Adapter
 
@@ -18,6 +20,53 @@ class PlantPopup(private val adapter: plant_Adapter,
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         //Injecter le layout creer
         setContentView(R.layout.popup_plant_details)
+        //Insertion des methodes pour les modifications du popup
+        setupCompoments()
+        setupCloseButton()
+        setupDeleteButton()
+        setupStarButton()
+    }
+
+    private fun updatestar(button: ImageView){
+        if(currentPlant.liked){
+            button.setImageResource(R.drawable.ic_start)
+        }
+        else{
+            button.setImageResource(R.drawable.ic_unstart)
+        }
+    }
+
+    private fun setupStarButton() {
+        //recuperer
+        val starButton=findViewById<ImageView>(R.id.star_button)
+
+        updatestar(starButton)
+        //interaction
+
+        starButton.setOnClickListener{
+            currentPlant.liked=!currentPlant.liked
+            val repo=PlantRepository()
+            repo.updatePlant(currentPlant)
+            updatestar(starButton)
+        }
+    }
+
+    private fun setupDeleteButton() {
+        findViewById<ImageView>(R.id.delete_button).setOnClickListener{
+            //supprimer la plante de la base en appelant la methode de ...repository
+            val repo=PlantRepository()
+             repo.deletePlant(currentPlant)
+            dismiss()
+            Toast.makeText(adapter.context, "Donnée supprimer", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun setupCloseButton() {
+        //recuperation
+        findViewById<ImageView>(R.id.close_button).setOnClickListener{
+            //fermer la fenetre
+            dismiss()
+        }
     }
 
     private fun setupCompoments(){
