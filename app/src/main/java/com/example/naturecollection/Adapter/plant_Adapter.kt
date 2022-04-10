@@ -63,6 +63,14 @@ class plant_Adapter(
             holder.starIcon.setImageResource(R.drawable.ic_unstart)
         }
 
+        //rajouter une interaction sur cette etoile
+        holder.starIcon.setOnClickListener{
+            //Si le bouton est tliker alors on inverse
+            currentPlant.liked=!currentPlant.liked
+            //Mettre a jour l'object
+
+        }
+
     }
 
     override fun getItemCount(): Int = plantlist.size

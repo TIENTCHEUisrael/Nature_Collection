@@ -48,5 +48,10 @@ class PlantRepository {
         })
     }
 
+    //Mettre a jour l'object
+    fun updatePlant(plant:PlantModel){
+
+    }
+
 
 }
