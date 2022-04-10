@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.naturecollection.MainActivity
 import com.example.naturecollection.PlantModel
+import com.example.naturecollection.PlantRepository
 import com.example.naturecollection.R
 
 class plant_Adapter(
@@ -45,6 +46,9 @@ class plant_Adapter(
         //recuperer les information de la plante
         val currentPlant=plantlist[position]
 
+        //recuperer le repository
+        val repo=PlantRepository()
+
         //Mise a jour de l'image
         //Utilisation de glide pour recuperer l'image a partir de son lien et l'ajouter a notre composant
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)//chargement d'une image depuis un lien, convertion de l'url de l'image en uri et inclusion dans le composant existant
@@ -68,7 +72,7 @@ class plant_Adapter(
             //Si le bouton est tliker alors on inverse
             currentPlant.liked=!currentPlant.liked
             //Mettre a jour l'object
-
+            repo.updatePlant(currentPlant)
         }
 
     }
