@@ -9,13 +9,10 @@ import android.widget.TextClock
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.naturecollection.MainActivity
-import com.example.naturecollection.PlantModel
-import com.example.naturecollection.PlantRepository
-import com.example.naturecollection.R
+import com.example.naturecollection.*
 
 class plant_Adapter(
-    private val context:MainActivity,
+    val context:MainActivity,
     private val plantlist:List<PlantModel>,
     val layout_id:Int
     ):RecyclerView.Adapter<plant_Adapter.ViewHolder>() {
@@ -73,6 +70,12 @@ class plant_Adapter(
             currentPlant.liked=!currentPlant.liked
             //Mettre a jour l'object
             repo.updatePlant(currentPlant)
+        }
+
+        //Interaction lors du clic d'une plante
+        holder.itemView.setOnClickListener{
+            //afficher le popup
+            PlantPopup(this).show()
         }
 
     }
