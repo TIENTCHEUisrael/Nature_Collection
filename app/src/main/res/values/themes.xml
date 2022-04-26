@@ -35,4 +35,10 @@
     </style>
 
 
+    <!-- personnaliser la barre de navigation-->
+    <style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/kanit</item>
+    </style>
+
 </resources>

@@ -33,9 +33,6 @@ class plant_Adapter(
         val view= LayoutInflater
             .from(parent.context)//prendre le contexte
             .inflate(layout_id,parent,false)//injecter l'element
-
-
-
         return ViewHolder(view)
     }
 

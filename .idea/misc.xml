@@ -3,14 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/layout/fragment_add_plant.xml" value="0.2" />
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/layout/fragment_collection.xml" value="0.16032608695652173" />
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/layout/fragment_home.xml" value="0.22083333333333333" />
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/layout/item_horizontal_plant.xml" value="0.22083333333333333" />
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/layout/item_vertical_plant.xml" value="0.25" />
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/layout/popup_plant_details.xml" value="0.22083333333333333" />
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/menu/bottomnavigationmenu.xml" value="0.22083333333333333" />
+        <entry key="..\:/Android Studio/NatureCollection/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1495" />
+        <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/drawable/bottom_nav_color.xml" value="0.199" />
         <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/fragment_add_plant.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/fragment_collection.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/item_horizontal_plant.xml" value="0.25" />
-        <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/item_vertical_plant.xml" value="0.16" />
+        <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/item_vertical_plant.xml" value="0.33" />
         <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/layout/popup_plant_details.xml" value="0.25" />
         <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/ISRAEL_LEICANOR/NatureCollection/app/src/main/res/menu/bottomnavigationmenu.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>
